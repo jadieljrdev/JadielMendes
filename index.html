@@ -9,32 +9,48 @@
     <link rel="shortcut icon" type="imagex/png" href="./assets/dewottpixel">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 </head>
-<body id="body">
-    <header>
-        <div class="container">
-            <div class="menu">
-                <a href="#sobre"class="sobre">
-                    <i class="fa-solid fa-house"></i>
-                    <p>Home</p>
-                </a>
-                <a href= "#skills" class="habilidades">
-                    <i class="fa-solid fa-display"></i>
-                    <p>Habilidades</p>
-                </a>
-                <a href= "#projects" class="projetos">
-                    <i class="fa-solid fa-diagram-project"></i>
-                    <p>Projetos</p>
-                </a>
-                <a href= "#contacts">
-                    <i class="fa-solid fa-phone"></i>
-                    <p>Contatos</p>
-                </a>
+<body data-bs-theme="dark">
+    <header class="nav">
+        <nav class="navbar navbar-expand-lg container">
+            <div class="container-fluid menu">
+              <a class="navbar-brand menu" href="#">
+                <i class="fa-solid fa-house"></i>
+                <p>Meu Portifólio</p>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Portfólio</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item menu">
+                      <a class="nav-link" href="#skills">
+                        <i class="fa-solid fa-display"></i>
+                        <p>Habilidades</p>
+                      </a>
+                    </li>
+                    <li class="nav-item menu">
+                        <a class="nav-link" href="#projects">
+                            <i class="fa-solid fa-diagram-project"></i>
+                            <p>Projetos</p>
+                        </a>
+                      </li>
+                      <li class="nav-item menu">
+                        <a class="nav-link" href="#contacts">
+                            <i class="fa-solid fa-address-book"></i>
+                            <p>Contatos</p>
+                        </a>
+                      </li>
+                </div>
+              </div>
             </div>
-            <div class="trilho" id="trilho">
-                <div class="indicador"></div>
-            </div>
-        </div>
+          </nav>
     </header> 
     <section id="sobre" class="js-section active ">
             <div class="container">
@@ -102,17 +118,21 @@
                         <p>Css</p>
                         <i class="fa-brands fa-css3-alt"></i>
                     </div>
+                    <div class="box" id="8">
+                        <p>Bootstrap</p>
+                        <i class="fa-brands fa-bootstrap"></i>
+                    </div>
                 </div>
             </div>
     </section>
-    <section id="projects" class="">
+    <section id="projects">
         <div class="container">
             <h2>Projetos</h2>
             <div class="allprojects">
                 <div class="cards-projects">
                     <div class="box" id="1">
                         <div class="cover">
-                            <img src="assets/image 2.jpg" alt="">
+                            <img src="assets/image 2.png" alt="">
                             <div class="details">
                                 <p>Robotron</p>
                                 <div class="mini-languages">
@@ -123,7 +143,7 @@
                             </div>
                         </div>
                         <div class="description">
-                            <a href="https://jadieljrdev.github.io/robotron2000/?" target="_blank">Ver mais</a>
+                            <a data-bs-toggle="modal" data-bs-target="#modal-1" target="_blank">Ver mais</a>
                         </div>
                     </div>
                     <div class="box" id="2">
@@ -139,7 +159,7 @@
                             </div>
                         </div>
                         <div class="description">
-                            <a href="https://jadieljrdev.github.io/numeroSecreto.1/" target="_blank">Ver mais</a>
+                            <a data-bs-toggle="modal" data-bs-target="#modal-2" target="_blank">Ver mais</a>
                         </div>
                     </div>
                     <div class="box" id="3">
@@ -155,7 +175,7 @@
                             </div>
                         </div>
                         <div class="description">
-                            <a href="https://jadieljrdev.github.io/numeroSecreto.2/" target="_blank">Ver mais</a>
+                            <a data-bs-toggle="modal" data-bs-target="#modal-3" target="_blank">Ver mais</a>
                         </div>
                     </div>
                     <div class="box" id="4">
@@ -171,23 +191,25 @@
                             </div>
                         </div>
                         <div class="description">
-                            <a href="http://jadieljrdev.github.io/aluramidi">Ver mais</a>
+                            <a data-bs-toggle="modal" data-bs-target="#modal-4" target="_blank">Ver mais</a>
                         </div>
                     </div>
                     <div class="box" id="5">
                         <div class="cover">
-                            <img src="assets/pingpong" alt="">
+                            <img src="assets/serenatto.png" alt="">
                             <div class="details">
-                                <p>Robotron</p>
+                                <p>Serenatto</p>
                                 <div class="mini-languages">
                                     <i class="fa-brands fa-html5"></i>
                                     <i class="fa-brands fa-js"></i>
                                     <i class="fa-brands fa-css3-alt"></i>
+                                    <i class="fa-brands fa-bootstrap"></i>
+
                                 </div>
                             </div>
                         </div>
                         <div class="description">
-                            <a>Ver mais</a>
+                            <a data-bs-toggle="modal" data-bs-target="#modal-5" target="_blank">Ver mais</a>
                         </div>
                     </div>
                     <div class="box" id="6">
@@ -201,9 +223,6 @@
                                     <i class="fa-brands fa-css3-alt"></i>
                                 </div>
                             </div>
-                        </div>
-                        <div class="description">
-                            <a>Ver mais</a>
                         </div>
                     </div>
                 </div>
@@ -275,6 +294,218 @@
         </div>
         </div>
     </section>
-    <script src="./script.js"></script>
+
+    <!-- Modal -->
+<div class="modal fade modal-xl " id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-2" id="exampleModalLabel">Robotron</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="imagem">
+                <img src="./assets/image 2.png" class="w-100" alt="imagem do projeto do Robotron">
+                <div class="botao">
+                    <button type="button"><a class="btn" href="https://jadieljrdev.github.io/robotron2000/" target="_blank">Acessar Projeto</a></button>
+                </div>
+                
+            </div>
+           <div class="info">
+            <p>
+                O Robotron 2000 é um projeto prático que foi desenvolvido durante o curso "JavaScript: manipulando o DOM".
+                <br>
+                <br>
+                Utilizamos o JavaScript para manipular o DOM (Document Object Model) da página web. Isso significa que aprendemos a interagir com os elementos HTML e CSS da página, adicionando funcionalidades e interatividade ao projeto.
+                <br>
+                <br>
+                Algumas das coisas que aprendemos:
+                <br>
+                <br>
+                 -Como selecionar e manipular elementos HTML usando JavaScript;
+                 <br>
+                 -Como criar funções e lógica de programação para controlar o robô;
+                 <br>
+                 -Como realizar cálculos e operações com os dados do robô;
+                 <br>
+                 -Como atualizar a interface do usuário de acordo com as ações do robô;
+            </p>
+           </div>
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-xl" id="modal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-2" id="exampleModalLabel">Número Secreto 1</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+                <div class="imagem">
+                    <img src="./assets/numeroSecreto1 1.png" class="w-100" alt="imagem do projeto numeroSecreto 1">
+                    <div class="botao">
+                        <button type="button"><a class="btn" href="https://jadieljrdev.github.io/numeroSecreto.1/" target="_blank">Acessar Projeto</a></button>
+                    </div>
+                    
+                </div>
+               <div class="info">
+                <p>
+                    O foco principal era aplicar os conceitos básicos de lógica de programação, como:
+                    <br>
+                    <br>
+                     -Variáveis: Aprendi armazenar informações, como o número secreto gerado pelo computador, em variáveis.
+                     <br>
+                     <br>                    
+                     -Condicionais (if-else): Utilizei condicionais para verificar se o palpite do usuário é maior, menor ou igual ao número secreto.
+                     <br>
+                     <br>
+                     -Loops: Implementei loops para permitir que o usuário continue tentando adivinhar o número até acertar.
+                     <br>
+                     <br>
+                     -Boas práticas de programação: Como dar nomes significativos às variáveis e manter um código organizado e legível.
+                    <br>
+                    <br>
+                    Com esses conceitos, criamos um jogo interativo de adivinhação do "Número Secreto 1.0", colocando em prática todos esses conceitos fundamentais de lógica de programação.
+                </p>
+               </div> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-xl" id="modal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-2" id="exampleModalLabel">Número Secreto 2</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="imagem">
+                <img src="./assets/jogoSecreto 1.png" class="w-100" alt="imagem do projeto do numeroSecreto 2">
+                <div class="botao">
+                    <button type="button"><a class="btn" href="https://jadieljrdev.github.io/numeroSecreto.2/" target="_blank">Acessar Projeto</a></button>
+                </div>
+                
+            </div>
+           <div class="info">
+            <p>
+                O projeto do Número Secreto 2.0 é baseado no jogo do número secreto. O objetivo principal é ensinar como usar o JavaScript para interagir com a tela e aplicar os conceitos de lógica de programação.
+                <br>
+                <br>
+                Adicionamos novas funcionalidades e melhorias visuais ao jogo do número secreto. Ao final, o projeto será colocado no ar para que outras pessoas possam acessá-lo e jogar.
+                <br>
+                <br>
+                O projeto visa aplicar os conhecimentos de lógica de programação e JavaScript em um jogo interativo, com o objetivo de disponibilizá-lo online para outras pessoas. Ajudando a colocar em prática tudo o que aprenderem durante o curso.
+            </p>
+           </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-xl" id="modal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-2" id="exampleModalLabel">Alura Midi</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="imagem">
+                <img src="./assets/aluramidi.png" class="w-100" alt="imagem do projeto do Alura Midi">
+                <div class="botao">
+                    <button type="button"><a class="btn" href="http://jadieljrdev.github.io/aluramidi" target="_blank">Acessar Projeto</a></button>
+                </div>
+                
+            </div>
+           <div class="info">
+            <p>
+                O Alura Midi é um instrumento musical interativo que será desenvolvido ao longo do curso. Ele consiste em uma interface digital onde o usuário poderá tocar diferentes sons ao clicar em botões ou pressionar teclas do teclado. O código base em HTML e CSS já está pronto, então o foco será no desenvolvimento do JavaScript.
+                <br>
+                <br>
+                    -Manipulação do DOM: Aprendi a selecionar, modificar e interagir com os elementos HTML da página usando JavaScript.
+                <br>
+                <br>
+                    -Eventos JavaScript: Trabalhei com diferentes tipos de eventos, como cliques e teclas pressionadas, para criar a interatividade do Alura Midi.
+                <br>
+                <br>
+                    -Funções JavaScript: Aprendi a criar e utilizar funções para organizar e modularizar o seu código.
+                <br>
+                <br>    
+                    -Condicionais e Loops: Estudei as estruturas de controle, como if/else e loops, para implementar a lógica do instrumento musical.
+                <br>
+                <br>
+                    -Variáveis e Tipos de Dados: Aprendi declarar e manipular variáveis, bem como os principais tipos de dados em JavaScript.
+            </p>
+           </div>
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-xl" id="modal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-2" id="exampleModalLabel">Serenatto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="imagem">
+                <img src="./assets/serenatto.modal" class="w-100" alt="imagem do projeto do Serenatto">
+                <div class="botao">
+                    <button type="button"><a class="btn" href="https://jadieljrdev.github.io/bootstrap.1/" target="_blank">Acessar Projeto</a></button>
+                </div>
+                
+            </div>
+           <div class="info">
+            <p>
+                O Robotron 2000 é um projeto prático que será desenvolvido ao longo do curso "JavaScript: manipulando o DOM". Nele, os alunos terão a tarefa de montar um robô que irá ajudar nas forças de defesa da Terra durante uma invasão alienígena.
+                <br>
+                <br>
+                Para isso, os alunos precisarão utilizar JavaScript para manipular o DOM (Document Object Model) da página web. Isso significa que eles irão aprender a interagir com os elementos HTML e CSS da página, adicionando funcionalidades e interatividade ao projeto.
+                <br>
+                <br>
+                Algumas das coisas que os alunos provavelmente irão aprender são:
+                <br>
+                <br>
+                 -Como selecionar e manipular elementos HTML usando JavaScript;
+                 <br>
+                 -Como criar funções e lógica de programação para controlar o robô;
+                 <br>
+                 -Como realizar cálculos e operações com os dados do robô;
+                 <br>
+                 -Como atualizar a interface do usuário de acordo com as ações do robô;
+            </p>
+           </div>
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </body>
 </html>
