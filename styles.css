@@ -708,3 +708,14 @@ section#contacts .contacts .icons .icon .box a{
     border:0.1rem solid var(--cor-destaque-dark);
     border-radius:2rem;
 }
+
+.js-section {
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateX(-10rem)
+}
+
+.js-section.active {
+    transform: translateX(0);
+    opacity: 1
+}
