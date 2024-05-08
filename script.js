@@ -25,3 +25,5 @@ const initAnimationScroll = () => {
 }
 
 initAnimationScroll();
+
+console.log('oi')
